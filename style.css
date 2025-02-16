@@ -1,76 +1,171 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --background-color: #f5f6fa;
+  --text-color: #2c3e50;
+  --border-color: #dcdde1;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background: #f4f4f4;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.resume-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Button Styles */
+.add-btn, .submit-btn, .download-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.add-btn:hover, .submit-btn:hover, .download-btn:hover {
+  opacity: 0.9;
+}
+
+/* Resume Preview Styles */
+.resume-preview {
+  margin-top: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.experience-item, .education-item, .certification-item, .project-item {
+  margin-bottom: 1.5rem;
+}
+
+.date-location {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  background-color: var(--background-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1rem;
   }
   
-  h1, h2, h3 {
-    margin: 0 0 10px;
+  .form-grid {
+      grid-template-columns: 1fr;
   }
   
-  .form-group {
-    margin-bottom: 20px;
+  .contact-info {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  .add-btn, .submit-btn, .download-btn {
-    padding: 10px 15px;
-    border: none;
-    background: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .add-btn:hover, .submit-btn:hover, .download-btn:hover {
-    background: #0056b3;
-  }
-  
-  /* Resume Preview Styling */
-  #resumePreview {
-    margin-top: 40px;
-  }
-  
-  .resume-container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    background: #fff;
-  }
-  
-  .resume-header h1 {
-    margin: 0;
-  }
-  
-  .contact-info span,
-  .contact-info a {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .resume-section {
-    margin-top: 20px;
-  }
-  
-  .skills-list .skill-item {
-    display: inline-block;
-    background: #eee;
-    padding: 5px 10px;
-    margin: 5px 5px 0 0;
-    border-radius: 3px;
-  }
-  
+}
