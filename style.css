@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2, h3 {
+    margin: 0 0 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .add-btn, .submit-btn, .download-btn {
+    padding: 10px 15px;
+    border: none;
+    background: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-btn:hover, .submit-btn:hover, .download-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Resume Preview Styling */
+  #resumePreview {
+    margin-top: 40px;
+  }
+  
+  .resume-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+  
+  .resume-header h1 {
+    margin: 0;
+  }
+  
+  .contact-info span,
+  .contact-info a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .resume-section {
+    margin-top: 20px;
+  }
+  
+  .skills-list .skill-item {
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 3px;
+  }
+  
