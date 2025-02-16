@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Resume Builder</title>
+    <title>Detailed Resume Builder</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -12,27 +12,22 @@
     <div class="container mx-auto p-6">
         <!-- Form Section -->
         <div class="bg-white rounded-xl shadow-lg p-10 max-w-4xl mx-auto">
-            <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-8">Resume Builder</h1>
+            <h1 class="text-3xl font-extrabold text-center text-blue-600 mb-8">Enhanced Resume Builder</h1>
             <form id="resumeForm" class="space-y-8">
                 <!-- Personal Information -->
                 <div>
                     <h2 class="text-xl font-semibold text-gray-700">Personal Information</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-                        <input id="fullName" type="text" placeholder="NEHA KANWAL" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        <input id="jobTitle" type="text" placeholder="WEB DEVELOPER" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input id="email" type="email" placeholder="khaniikhan200121@gmail.com" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input id="phone" type="tel" placeholder="03202109919" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input id="location" type="text" placeholder="Karachi" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input id="linkedin" type="url" placeholder="https://www.linkedin.com/in/neha-khan-02811a255?utm_source=share_via&utm_content=profile&utm_medium=android_app" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input id="portfolio" type="url" placeholder="https://nehsam2127/vercel.com" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="fullName" type="text" placeholder="Full Name" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <input id="jobTitle" type="text" placeholder="Job Title" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="email" type="email" placeholder="Email" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="phone" type="tel" placeholder="Phone Number" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="location" type="text" placeholder="Location (City, Country)" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="linkedin" type="url" placeholder="LinkedIn Profile URL" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="portfolio" type="url" placeholder="Portfolio or Personal Website" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="github" type="url" placeholder="GitHub Profile" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </div>
                     <textarea id="summary" placeholder="Professional Summary" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4" rows="4"></textarea>
-                </div>
-
-                <!-- Skills -->
-                <div>
-                    <h2 class="text-xl font-semibold text-gray-700">Skills</h2>
-                    <textarea id="skills" placeholder="E.g., HTML, CSS, JavaScript, React, etc." class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4" rows="4"></textarea>
                 </div>
 
                 <!-- Work Experience -->
@@ -40,10 +35,10 @@
                     <h2 class="text-xl font-semibold text-gray-700">Work Experience</h2>
                     <div class="experience-entry mt-4 bg-gray-50 p-4 rounded-lg">
                         <input type="text" placeholder="Job Title" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input type="text" placeholder="Company" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" placeholder="Company Name" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <input type="text" placeholder="Location" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input type="text" placeholder="Duration" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <textarea placeholder="Responsibilities" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+                        <input type="text" placeholder="Duration (e.g., Jan 2020 - Dec 2022)" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <textarea placeholder="Key Responsibilities and Achievements" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
                     </div>
                     <button type="button" class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full shadow hover:bg-blue-600" onclick="addExperience()">Add More</button>
                 </div>
@@ -54,9 +49,15 @@
                     <div class="education-entry mt-4 bg-gray-50 p-4 rounded-lg">
                         <input type="text" placeholder="Degree" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <input type="text" placeholder="Institution" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input type="text" placeholder="Year" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" placeholder="Year of Graduation" class="w-full border border-gray-300 rounded-lg p-3 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </div>
                     <button type="button" class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full shadow hover:bg-blue-600" onclick="addEducation()">Add More</button>
+                </div>
+
+                <!-- Skills -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-700">Skills</h2>
+                    <textarea id="skills" placeholder="List your skills separated by commas (e.g., JavaScript, React, Node.js)" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3"></textarea>
                 </div>
 
                 <!-- Submit Button -->
@@ -66,6 +67,11 @@
 
         <!-- Resume Preview -->
         <div id="resumePreview" class="mt-10 p-8 bg-white rounded-xl shadow-lg hidden"></div>
+
+        <!-- Action Buttons -->
+        <div id="actionButtons" class="hidden mt-4 flex justify-center gap-4">
+            <button class="bg-blue-500 text-white px-6 py-3 rounded-full shadow hover:bg-blue-600" onclick="printPDF()">Download PDF</button>
+        </div>
     </div>
 
     <script>
@@ -83,40 +89,44 @@
 
         document.getElementById('resumeForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const fullName = document.getElementById('fullName').value;
             const jobTitle = document.getElementById('jobTitle').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const location = document.getElementById('location').value;
             const summary = document.getElementById('summary').value;
-            const skills = document.getElementById('skills').value;
+            const linkedin = document.getElementById('linkedin').value;
+            const portfolio = document.getElementById('portfolio').value;
+            const github = document.getElementById('github').value;
 
             const workExperiences = Array.from(document.querySelectorAll('.experience-entry')).map(entry => ({
                 jobTitle: entry.querySelector('input[placeholder="Job Title"]').value,
-                company: entry.querySelector('input[placeholder="Company"]').value,
+                company: entry.querySelector('input[placeholder="Company Name"]').value,
                 location: entry.querySelector('input[placeholder="Location"]').value,
-                duration: entry.querySelector('input[placeholder="Duration"]').value,
+                duration: entry.querySelector('input[placeholder="Duration (e.g., Jan 2020 - Dec 2022)"]').value,
                 responsibilities: entry.querySelector('textarea').value
             }));
 
-            const education = Array.from(document.querySelectorAll('.education-entry')).map(entry => ({
+            const educationEntries = Array.from(document.querySelectorAll('.education-entry')).map(entry => ({
                 degree: entry.querySelector('input[placeholder="Degree"]').value,
                 institution: entry.querySelector('input[placeholder="Institution"]').value,
-                year: entry.querySelector('input[placeholder="Year"]').value
+                graduationYear: entry.querySelector('input[placeholder="Year of Graduation"]').value
             }));
+
+            const skills = document.getElementById('skills').value;
 
             const resumeHTML = `
                 <div class="p-6">
                     <h1 class="text-4xl font-extrabold text-blue-600">${fullName}</h1>
                     <p class="text-xl text-gray-600 font-semibold">${jobTitle}</p>
                     <p class="text-gray-700 text-lg">${email} | ${phone} | ${location}</p>
+                    <p class="text-gray-700 text-lg">LinkedIn: <a href="${linkedin}" target="_blank" class="text-blue-500 underline">${linkedin}</a></p>
+                    <p class="text-gray-700 text-lg">Portfolio: <a href="${portfolio}" target="_blank" class="text-blue-500 underline">${portfolio}</a></p>
+                    <p class="text-gray-700 text-lg">GitHub: <a href="${github}" target="_blank" class="text-blue-500 underline">${github}</a></p>
 
                     <h2 class="text-2xl font-semibold text-gray-800 mt-8">Professional Summary</h2>
                     <p class="text-gray-800 mt-2">${summary}</p>
-
-                    <h2 class="text-2xl font-semibold text-gray-800 mt-8">Skills</h2>
-                    <p class="text-gray-800 mt-2">${skills}</p>
 
                     <h2 class="text-2xl font-semibold text-gray-800 mt-8">Work Experience</h2>
                     ${workExperiences.map(exp => `
@@ -128,20 +138,36 @@
                     `).join('')}
 
                     <h2 class="text-2xl font-semibold text-gray-800 mt-8">Education</h2>
-                    ${education.map(edu => `
+                    ${educationEntries.map(edu => `
                         <div class="mt-6">
                             <h3 class="text-lg font-bold text-blue-500">${edu.degree}</h3>
-                            <p class="text-gray-600">${edu.institution} | ${edu.year}</p>
+                            <p class="text-gray-600">${edu.institution} | Graduation: ${edu.graduationYear}</p>
                         </div>
                     `).join('')}
+
+                    <h2 class="text-2xl font-semibold text-gray-800 mt-8">Skills</h2>
+                    <p class="text-gray-800 mt-2">${skills}</p>
                 </div>
             `;
 
             const previewSection = document.getElementById('resumePreview');
             previewSection.innerHTML = resumeHTML;
             previewSection.classList.remove('hidden');
+            document.getElementById('actionButtons').classList.remove('hidden');
             previewSection.scrollIntoView({ behavior: 'smooth' });
         });
+
+        function printPDF() {
+            const element = document.getElementById('resumePreview');
+            const opt = {
+                margin: 0.5,
+                filename: 'resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
     </script>
 </body>
 </html>
